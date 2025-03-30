@@ -1,0 +1,28 @@
+Recursion: Whren a function calls itself until a specified condition is met.
+
+** The main thing we have to take care in recursion is that there must be two things in the recusrsive function:
+1: Stopping(Base Condition)
+2: Recusive function
+
+Why Use Recursion When We Can Solve It Without It?
+Your question is very valid! In many cases, recursion seems to make things more complicated than necessary. However, recursion is important because:
+
+1: Simplifies Complex Problems:
+Some problems (e.g., tree traversal, backtracking, dynamic programming) are naturally recursive, and solving them iteratively would be more difficult.
+Example: Tower of Hanoi, DFS traversal of a graph/tree, Sudoku solver.
+
+2: Reduces Code Complexity:
+In problems like reversing an array or checking a palindrome, recursion removes the need for explicit loops and makes the logic more declarative.
+
+3: Useful in Functional Programming:
+Many modern languages (Haskell, Lisp) use recursion as a primary tool instead of loops.
+In functional programming, recursion avoids side effects and helps in pure function execution.
+
+4: Divide and Conquer Algorithms:
+Algorithms like Merge Sort, Quick Sort, and Binary Search heavily rely on recursion.
+They are much easier to implement recursively than iteratively.
+
+When Should You Avoid Recursion?
+If a problem can be easily solved iteratively, recursion might introduce extra overhead due to function call stack usage.
+In some cases, recursion can lead to stack overflow if the recursion depth is too high.
+Iterative solutions are often more memory-efficient.
