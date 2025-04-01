@@ -17,7 +17,7 @@ int count(int n){
     return cnt;
 }
 
-int main(){
+int main(){ 
 
     cout << "Enter the number:" << endl;
     int n;

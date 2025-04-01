@@ -2,7 +2,9 @@
 using namespace std;
 
 // Stack overflow
-void print(){
+// A stack overflow occurs when a program uses more stack memory than what is available, typically due to too many recursive function calls.
+void print()
+{
     cout << 1 << endl;
     print();
 }

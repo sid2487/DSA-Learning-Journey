@@ -2,7 +2,7 @@ Recursion: Whren a function calls itself until a specified condition is met.
 
 ** The main thing we have to take care in recursion is that there must be two things in the recusrsive function:
 1: Stopping(Base Condition)
-2: Recusive function
+2: Recursive function
 
 Why Use Recursion When We Can Solve It Without It?
 Your question is very valid! In many cases, recursion seems to make things more complicated than necessary. However, recursion is important because:

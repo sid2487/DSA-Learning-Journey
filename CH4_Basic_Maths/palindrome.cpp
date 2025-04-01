@@ -1,7 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool isPalindrome(int x)
+// A palindrome number is a number that reads the same forward and backward.
+
+    bool isPalindrome(int x)
 {
     if (x < 0)
         return false;

@@ -21,28 +21,34 @@ using namespace std;
     cout << arr[1].second;
 }
 
-// vectors
+// vectors: in the normal array it is impossible to increase the size once you initialize and that's why we have introduced vectors.
+// It's like a container which is Dynamic in nature. 
 
 void explainVectors(){
 
     vector<int> v;
     
-    v.push_back(1);
-    v.emplace_back(2);
+    v.push_back(1);// {1}
+    v.emplace_back(2); // {1,2} // dynamically inc. the size and insert the element from the back
 
     vector<pair<int, int>>vec;
     vec.push_back({1,2});
     vec.emplace_back(1,2);
 
-    vector<int> v(5,100);
+    vector<int> v(5,100); // it means v carries the 5 instances of 100 // {100,100,100,100,100}
 
-    vector<int> v5(5); 
+    vector<int> v5(5); // a container of 5 instances with the value 0 or garbage inside it. 
 
-    vector<int> v1(5,20);
-    vector<int> v2(v1);
+    vector<int> v1(5,20); // {20,20,20,20,20}
+    vector<int> v2(v1); // this will  pass the v1 inside the v2. //  
 
-    vector<int>::iterator it = v.begin();
+    // to access the element of v:
+    // 1) v[1] = 10 or v[5] = 7;
+    // 2) through iterator: iterator is just pointing to the memory where element is located.
 
+    vector<int>::iterator it = v.begin(); // v.begin() points to the memory not to the element
+
+    // in order to access anything inside the memory, we use '*'
     it++;
     cout << *(it) << " ";
 
@@ -71,7 +77,7 @@ void explainVectors(){
 
     v.erase(v.begin()+1); // it will erase 20 and the vector will be reshuffled {10,12,23,35}
 // {10,20,12,23,35}
-    v.erase(v.begin()+2, v.begin()+4); // {10,20,35} it will erase the 3rd and the 3rd element 
+    v.erase(v.begin()+2, v.begin()+4); // {10,20,35} it will erase the 2nd and the 3rd element 
     // notice here that start is included but end is not
 
     // Insert function
@@ -151,8 +157,8 @@ void explainStack() {
         // Q is {1,2,9}
         cout << q.front(); // prints 1
 
-        q.pop(); // {1,2}
-
+        q.pop(); // {2,9}
+        cout <<"line no 161"<< endl;
         cout << q.front(); // prints 2
 
         // size swap empty same as stack
@@ -257,6 +263,7 @@ void explainStack() {
     // keys == roll no --> unique
     // values == name --> can be same
     // so map stores data in the form of {key, value} pair and this key can be of any data types and same with the value too.
+    // map stores unique keys in sorted order very much similar to sets
 
     void explainMap(){
 
@@ -267,14 +274,56 @@ void explainStack() {
 
         map<pair<int,int>, int>mpp;
 
-        // this is how we stores
+        // this is how we stores [{1,2}, {2,4}, {3,1}]
         mpp[1] = 2; // stores {1,2}
-        mpp.emplace({3,1}); // stores {3,1} 3 as a key and 1 as a value
+        mpp.emplace(3,1); // stores {3,1} 3 as a key and 1 as a value
         mpp.insert({2,4}); // same 
+
+        // mpp[{2,3}] = 10; // stores {[2,3], 10}
+
+        // to iteratete on the map
+        for(auto it : mpp){
+            cout << it.first << " " << it.second << endl;
+        }
+
+        cout << mpp[1]; // prints 2
+        cout << mpp[5]; // prints null or 0 since 5 is not available
+
+        auto it = mpp.find(3); // this gives the address of the 3rd 
+        // cout << *(it).second; // this will gives the value of it
+
+        auto it = mpp.find(5); // pointing to the end if its not available in the map
+
+        // This is the syntax
+        auto it = mpp.lower_bound(2);
+
+        auto it = mpp.upper_bound(3);
+
+        // erase, swap, size, empty, are same as above
+
+    }
+
+    // Multimap: similar to map only difference is you can store duplicate keys too but in sorted order.
+    void explainMultimap(){
+        // only mpp[key] can not be used here
+    }
+
+    void explainUnorderedMap(){
+        // not stored in sorted, stores randomly and it has unique keys only
+        // same as set and unordered_set difference.
+    }
+
+    // sorting in c++ stl (Check notes)
+
+    void explainExtra(){
+
+        // check the notes
+        // sort(a, a+n);
+        // sort(v.begin(), v.end()); 
     }
 
     int main()
     {
-
+        explainQueue();
         return 0;
 }

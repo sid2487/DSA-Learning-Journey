@@ -4,6 +4,7 @@ using namespace std;
 // Print the sum of first n numbers
 int parametrised(int i, int sum){
     if(i<1){
+        // cout << sum << endl;
         return sum;
     }
     return parametrised(i-1, sum+i);
