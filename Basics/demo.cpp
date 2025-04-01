@@ -8,15 +8,15 @@ int main(){
   // string and getline (to store string or character)
   // char
 
-  //    string s1;
- //    string s2;
- //    cin>>s1>>s2;
- //    cout << s1 <<" "<< s2<<endl;
+     string s1;
+    string s2;
+    cin>>s1>>s2;
+    cout << s1 <<" "<< s2<<endl;
 
 // to print the entire sentence in one go we have to use inline.
     string str;
-    getline(cin, str);
-    cout << str;
+    // getline(cin, str);
+    // cout << str;
 
     
 

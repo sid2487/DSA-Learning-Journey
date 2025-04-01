@@ -18,9 +18,9 @@ void doSomething2(int &num){
 
 int main(){
 
-    // string s = "sits";
-    // doSomething(s); // now its sending the address of the s
-    // cout << s << endl;
+    string s = "sits";
+    doSomething(s); // now its sending the address of the s
+    cout << s << endl;
 
     int num = 10;
     doSomething2(num); // now its sending the address of num i.e the original one

@@ -285,7 +285,7 @@ int main(){
     // print8(n);
     // print9(n); combine 7 and 8 together (print both the function together)
     // print10(n);
-    // print11(n);
+    print11(n);
     // print12(n);
     // print13(n);
     // print14(n);
@@ -294,7 +294,7 @@ int main(){
     // print17(n);
     // print18(n);
     // print19(n);
-    print20(n);
+    // print20(n);
 
 
 

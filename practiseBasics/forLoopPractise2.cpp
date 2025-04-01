@@ -17,8 +17,8 @@ int main()
     {
         int nextNo = a + b;
         cout << nextNo << " ";
-        a = b;
-        b = nextNo;
+        a = b; // make b as a
+        b = nextNo; // make nextno as b
     }
 
     return 0;
