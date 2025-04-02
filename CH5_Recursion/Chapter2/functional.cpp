@@ -5,8 +5,7 @@ using namespace std;
 
 // Key Idea : Each recursive call does part of the work and returns the result to the previous call.
 
-// Best For : Problems where results are built up using return values(e.g., factorial, sum of numbers)
-//                                        .
+// Best For : Problems where results are built up using return values(e.g., factorial, sum of numbers)                                    .
 
 int sum(int n)
 {
