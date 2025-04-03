@@ -20,7 +20,7 @@ int main(){
         char c;
         cout << "Enter the character you want to check: ";
         cin >> c;
-        cout << "The number of times " << c << " " << "occus is: " << hash[c] << endl;
+        cout << "The number of times " << c << " " << "occurs is: " << hash[c] << endl;
     }
 
 

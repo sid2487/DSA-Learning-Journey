@@ -14,7 +14,7 @@ int main(){
     }
 
     // precompute the frequency
-    int hash[100] = {0}; // max upto pow(10, 7); if declare globally and 6 if here and above that array can't handle so we use stl.
+    int hash[100] = {0}; // max upto pow(10, 7), if declared globally, and 6 if here and above that, array can't handle so we use stl.
     for(int i=0; i<n; i++){
         hash[arr[i]]++;
     }
