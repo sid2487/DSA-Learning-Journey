@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 // insertion sort: always takes an element & place it in its correct order.
+// TC: O(n^2) for average and worst case, and O(n) for the best case.
 
 void insertion_sort(int arr[], int n)
 {
