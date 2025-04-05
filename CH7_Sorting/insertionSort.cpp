@@ -3,6 +3,17 @@ using namespace std;
 // insertion sort: always takes an element & place it in its correct order.
 // TC: O(n^2) for average and worst case, and O(n) for the best case.
 
+/*
+
+Logic: Pick one element at a time and insert it into its correct position in the sorted part (left side).
+
+Example: [4, 2, 5, 1]
+start from second element(for comparing)
+Step 1: Insert 2 before 4 → [2, 4, 5, 1]
+Step 2: 5 is fine
+Step 3: Insert 1 at the start → [1, 2, 4, 5]
+
+*/
 void insertion_sort(int arr[], int n)
 {
     for (int i = 0; i <= n - 1; i++)

@@ -1,53 +1,54 @@
 #include<bits/stdc++.h>
 using namespace std;
+// to bring the pivot to the correct position
+int partitionIndex(vector<int>& arr, int low, int high){
+    int pivot = arr[low];
+    int i = low;
+    int j = high;
 
-void merge(vector<int>& arr, int low, int mid, int high){
-    vector<int> temp;
+    while(i<j){
+        while(arr[i] <= pivot && i <= high-1){
+            i++;
+        }
 
-    int left = low;
-    int right = mid+1;
+        while(arr[j] > pivot && j >= low+1){
+            j--;
+        }
 
-    while(left<=mid && right<=high){
-        if(arr[left] < arr[right]){
-            temp.push_back(arr[left]);
-            left++;
-        } else {
-            temp.push_back(arr[right]);
-            right++;
+        // if both arr[i] > pivot and arr[j] <= pivot then swap
+        if(i<j){
+            int temp = arr[j];
+            arr[j] = arr[i];
+            arr[i] = temp;
         }
     }
+    // place pivot in its correct position
+    swap(arr[low], arr[j]);
+    return j;
+}
 
-    // check if something remains in either left or right array
-    while(left<=mid){
-        temp.push_back(arr[left]);
-        left++;
-    }
+// recursive function
 
-    while(right<=high){
-        temp.push_back(arr[right]);
-        right++;
-    }
-
-    // push temp into original array
-    for(int i=low; i<=high; i++){
-        arr[i] = temp[i-low];
+    void qS(vector<int> &arr, int low, int high)
+{
+    if(low < high) {
+        int pIndex = partitionIndex(arr, low, high);
+        qS(arr, low, pIndex-1);
+        qS(arr, pIndex+1, high);
     }
 }
 
-    void
-    mergeSort(vector<int> &arr, int low, int high)
-{
-    if(low == high) return;
-    int mid = (low + high)/2;
-    mergeSort(arr, low, mid);
-    mergeSort(arr, mid+1, high);
-    merge(arr, low, mid, high);
+// calling  function
+
+vector<int> quickSort(vector<int> arr){
+    qS(arr, 0, arr.size()-1);
+    return arr;
 }
 
 int main() {
 
     int n;
-    cout << "Enter the value of n: ";
+    cout << "Enter the n: ";
     cin >> n;
 
     vector<int> arr(n);
@@ -55,11 +56,10 @@ int main() {
         cin >> arr[i];
     }
 
-    mergeSort(arr, 0, arr.size()-1);
+   arr =  quickSort(arr);
     for(int i=0; i<n; i++){
         cout << arr[i] << " ";
     }
-
 
 
 

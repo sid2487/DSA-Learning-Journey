@@ -3,6 +3,8 @@ using namespace std;
 
 // Merge Sort: Divide and Merge(TC: [ O(n*log(n base2)) ])
 
+// Divide the array into halves, sort them recursively, then merge the sorted halves.
+
 // merge two sorted half
 void merge(vector<int>& arr, int low, int mid, int high){
     vector<int> temp;

@@ -2,6 +2,35 @@
 using namespace std;
 
 // bubble sort: pushes maximum to the last by adjacent swaps. (TC: O(n^2) is worst and average compelxity and its O(n) for the best case)
+
+
+/*
+
+Logic: Keep swapping adjacent elements if they're in the wrong order. Largest bubbles up to the end in each pass.
+
+Repeat passes until the array is sorted.
+
+Example: [4, 2, 5, 1]
+Pass 1:
+
+4 > 2 → swap → [2, 4, 5, 1]
+
+4 < 5 → no swap
+
+5 > 1 → swap → [2, 4, 1, 5]
+
+Pass 2:
+
+2 < 4 → no swap
+
+4 > 1 → swap → [2, 1, 4, 5]
+
+Pass 3:
+
+2 > 1 → swap → [1, 2, 4, 5]
+
+*/
+
 void bubble_sort(int arr[], int n){
     for(int i=n-1; i>=0; i--){
         int didSwap = 0;
