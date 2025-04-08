@@ -6,7 +6,7 @@ using namespace std;
 
 int main(){
 
-    /*
+
     // better solution
     
     int arr[] = {4,5,8,7,10,9};
@@ -28,7 +28,7 @@ int main(){
     }
 
     cout << sLargest << endl;
-*/
+
 
 
     return 0;

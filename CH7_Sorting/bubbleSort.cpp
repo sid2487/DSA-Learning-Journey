@@ -48,7 +48,7 @@ void bubble_sort(int arr[], int n){
     }
 }
 
-// another way
+// another way(Repeatedly go through the list)
 void bubbleSort(vector<int>& arr){
     int n = arr.size();
     bool swapped;

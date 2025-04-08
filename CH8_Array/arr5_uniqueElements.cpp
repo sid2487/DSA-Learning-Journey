@@ -8,6 +8,8 @@ using namespace std;
 
 // for optimise approach use two pointer approach
 
+// remove duplicates
+
 int main() {
 
     int arr[] = {1,1,2,2,2,3,3};

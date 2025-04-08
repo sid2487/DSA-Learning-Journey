@@ -24,8 +24,7 @@ int partitionIndex(vector<int>& arr, int low, int high){
 }
 
     // recursive funciton
-    void
-    qS(vector<int> &arr, int low, int high)
+    void qS(vector<int> &arr, int low, int high)
 {
     if(low < high){
         int pIndex = partitionIndex(arr, low, high);
@@ -51,7 +50,7 @@ int main() {
 
     arr = quickSort(arr); // you have to assign it
 
-    quickSort2(arr); // jsut call don't need to assign it
+    quickSort2(arr); // just call don't need to assign it
 
     // if you don't want wrapper, call directly
     qS(arr, 0, arr.size()-1);

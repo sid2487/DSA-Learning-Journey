@@ -27,7 +27,7 @@ vector<int> intersectionArray(vector<int> &a, int n, vector<int> &b, int m)
     return ans;
 }
 
-// optimal sol: using two pointers
+// optimal sol: using two pointers, tc: O(n1*n2) in worst case and sc: O(1)
 vector<int> intersectionArr(vector<int>& a, int n, vector<int>& b, int m){
     int i = 0;
     int j = 0;
