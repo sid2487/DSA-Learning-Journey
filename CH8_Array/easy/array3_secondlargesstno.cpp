@@ -7,7 +7,7 @@ using namespace std;
 int main(){
 
 
-    // better solution
+    // better solution]
     
     int arr[] = {4,5,8,7,10,9};
     int n = sizeof(arr) / sizeof(arr[0]);

@@ -10,7 +10,8 @@ vector<int> removeDuplicate(vector<int> &arr)
 
     for (int num : arr)
     {
-        if (st.find(num) == st.end())
+        //  st.end() denotes "Not found" marker in the set
+        if (st.find(num) == st.end()) // 	num is not in the set
         {
             result.push_back(num); // If not seen before, add to result
             st.insert(num);        // Mark as seen

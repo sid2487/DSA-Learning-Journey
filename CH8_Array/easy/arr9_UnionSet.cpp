@@ -35,7 +35,7 @@ vector <int> sortedArray2(vector<int>& a, vector<int>& b){
             i++;
         }
         else{
-            if(unionArr.size() == 0 || unionArr.back() != a[j] ){
+            if(unionArr.size() == 0 || unionArr.back() != b[j] ){
                 unionArr.push_back(b[j]);
             }
             j++;

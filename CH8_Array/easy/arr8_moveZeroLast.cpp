@@ -25,6 +25,7 @@ vector<int> moveZeros(int n, vector<int>& a){
 // optimal can be done using two pointers: tc: O(n) and sc: O(1);
 vector<int> moveZ(int n, vector<int>& arr){
     int j = -1;
+    // first step: find the first zero element and give it to the j
     for(int i=0; i<n; i++){
         if(arr[i] == 0) {
             j=i;

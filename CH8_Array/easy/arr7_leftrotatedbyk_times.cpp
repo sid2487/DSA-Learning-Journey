@@ -41,6 +41,16 @@ void leftR(vector<int>& arr, int k){
     }
 }
 
+// optimal solution
+void leftRotateOpt(int arr[], int n, int k) {
+    k = k % n;
+    reverse(arr, arr+k); // reverse the first k elements
+    reverse(arr+k, arr+n); // reverse reamining n-k elements
+    reverse(arr, arr+n); // reverse the whole array
+
+
+}
+
 
 
 int main() {

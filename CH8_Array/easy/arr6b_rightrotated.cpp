@@ -20,11 +20,11 @@ void rotateRight(vector<int>& arr, int k){
     }
 }
 
-// optimal solution
+// optimal solution(tc: O(n) and sc: O(1))
 void leftRotate(int arr[], int n, int k){
+    reverse(arr, arr+n);
     reverse(arr, arr + k); // reverse from index 0 to k-1
     reverse(arr + k, arr + n); // reverse from index k to n-1
-    reverse(arr, arr+n);
 }
 
 int main() {
