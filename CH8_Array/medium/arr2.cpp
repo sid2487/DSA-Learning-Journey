@@ -2,7 +2,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// brute will be sorting
+// brute will be sorting(tc: O(n) and sc: O(1))
+void bruteSol(vector<int> &arr){
+    int n = arr.size();
+    int count0=0, coutn1=0, count2=0;
+    // sort(arr.begin(), arr.end());
+    for(int i=0; i<n; i++){
+        if(arr[i] == 0){
+            count0++;
+        } else if(arr[i] == 1){
+            coutn1++;
+        } else {
+            count2++;
+        }
+    }
+    cout << "0s: " << count0 << ", 1s: " << coutn1 << ", 2s: " << count2 << endl;
+    
+}
+
+
+
 // better(tc:O(2n) and sc: O(1))
 vector<int> better(vector<int>& arr){
     int n= arr.size();

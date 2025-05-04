@@ -10,11 +10,11 @@ int substractProductAndSum(int n)
 
     while (n != 0)
     {
-        int digit = n % 10; // Extract the last digit.
+        int digit = n % 10; // Extract the last digit(rightmost digit).
         prod = prod * digit;
         sum = sum + digit;
 
-        n = n / 10; // removes the last digit
+        n = n / 10; // removes the last digit from the number
     }
     int answer = prod - sum;
     return answer;

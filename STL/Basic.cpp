@@ -158,7 +158,6 @@ void explainStack() {
         cout << q.front(); // prints 1
 
         q.pop(); // {2,9}
-        cout <<"line no 161"<< endl;
         cout << q.front(); // prints 2
 
         // size swap empty same as stack
@@ -223,6 +222,7 @@ void explainStack() {
         auto it1 = st.find(2);
         auto it2 = st.find(4);
         st.erase(it1, it2); // after erase {1,4,5} [first, last]
+        // st.erase removes all the elements ranges in between and includes the first but excludes the last
     }
 
     // It only obeys sorted but not unique
@@ -259,7 +259,7 @@ void explainStack() {
 
     }
 
-    // Map: suppose in a class with a particular name there can be many students btu what differentiate them is their roll number, so here in map, keys are like roll no which is unique and the value is like name.
+    // Map: suppose in a class with a particular name there can be many students but what differentiate them is their roll number, so here in map, keys are like roll no which is unique and the value is like name.
     // keys == roll no --> unique
     // values == name --> can be same
     // so map stores data in the form of {key, value} pair and this key can be of any data types and same with the value too.

@@ -35,7 +35,7 @@ vector<int> twoSum(vector<int>& arr, int target){
             } else if(sum < target) {
                 left++;
             } else {
-                right++;
+                right--;
             }
         }
         return "No" ;
@@ -45,9 +45,13 @@ int main(){
 
     
 vector<int> arr = {2,7,11,15};
-vector<int> ans = twoSum(arr, 9);
+// vector<int> ans = twoSum(arr, 9);
+
  
-cout << ans[0] << " " << ans[1] << endl;
+// cout << ans[0] << " " << ans[1] << endl;
+
+string result = optimal(arr, 9);
+cout << result << endl;
 
     return 0;
 }
@@ -56,9 +60,9 @@ cout << ans[0] << " " << ans[1] << endl;
 /*
 // important points for map
 
-mpp.find(key) -->> search for key, return iterator
+mpp.find(key) -->> search for key, return iterator mpp.end()
 mpp.end() --> iterator that represent "not found"
-mpp.find(key) != mpp.end() -->> key exist in the map
-mpp.find(key) == mpp.end() -->> key does not exist
+mpp.find(key) != mpp.end() -->> key exist in the map because its not pointing to the mpp.end()
+mpp.find(key) == mpp.end() -->> key does not exist because its returning or pointing to the mpp.end()
 
 */

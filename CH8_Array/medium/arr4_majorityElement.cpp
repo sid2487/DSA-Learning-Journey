@@ -16,7 +16,7 @@ int majElement(vector<int>& arr, int n){
     return -1;
 }
 
-// better (tc: O(nlogn) + O(n) and O(n)) 
+// better (tc: O(nlogn) + O(n) and sc: O(n)) hashing
 int betterSol(vector<int>& arr){
     map<int, int>mpp;
     for(int i=0; i<arr.size(); i++){
@@ -32,7 +32,7 @@ int betterSol(vector<int>& arr){
 
 }
 
-// opti sole(Moore's voting algorithum) (tc: O(n) and sc: O(1) )
+// opti sole(Moore's voting algorithum) (tc: O(n) and sc: O(1))   
 int optiSol(vector<int>& arr, int n){
     int cnt = 0;
     int el;

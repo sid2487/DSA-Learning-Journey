@@ -22,7 +22,7 @@ int longSubstringUniqueChar(string &s, int k){
         else if(mp.size() > k){
             while(mp.size() > k){
                 mp[s[i]]--;
-                if(mp[s[i]] == 0){
+                if(mp[s[i]] == 0){ 
                     mp.erase(s[i]);
                 }
                 i++;

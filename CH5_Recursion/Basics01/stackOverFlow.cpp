@@ -25,4 +25,4 @@ int main(){
 // Think of the stack as a small table where items are stacked and removed in a last - in - first - out order(like a stack of plates).Once a plate(function call) is done, it's automatically removed.
 
 //     On the other hand,
-//     the heap is like a large storage room where you can place and remove items as you need.You can decide exactly where to place items and when to remove them, but you must also remember to clean up the room by removing the items yourself when you're done. If you forget to clean up, the room will get cluttered with unused items — this is like a memory leak.
+//     the heap is like a large storage room where you can place and remove items as you need.You can decide exactly where to place items and when to remove them, but you must also remember to clean up the room by removing the items yourself when you're done. If you forget to clean up, the room will get cluttered with unused items — this is like a memory leak.  

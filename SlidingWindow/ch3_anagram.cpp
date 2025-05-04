@@ -3,6 +3,8 @@ using namespace std;
 
 // count occurence of anagram: ek badi si string and ek angram given hota hai and we have to see how many times that anagram comes in the big string, so we have to return the count.
 
+// anagrams: they must contain the same letters, each letters must appear the same no of times and the order doesn't mattter.
+
 // tc: O(k+n) k is length of pattern ptr and n is length of string
 // sc: O(1) [if we consider only lowercase letters] and 
 // O(d) [if there are d unique characters in pattern]

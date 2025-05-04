@@ -22,6 +22,8 @@ int main(){
 
     
 
+    
+
     // query
     int query;
     cout << "Enter the query: ";

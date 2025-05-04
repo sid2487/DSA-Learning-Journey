@@ -17,6 +17,8 @@ void checkPrime(int n){
     }
 }
 
+
+
 // method 2 : TC: O(n) ------>> Brutforce, slow but easy to understand.
 void checkPrime2(int n){
     if(n<2){
