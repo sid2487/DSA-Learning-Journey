@@ -1,4 +1,4 @@
-// count an array of 0's, 1's and 2's
+// Given an array arr consisting of only 0s, 1s, and 2s, sort the array in ascending order (i.e., all 0s first, then 1s, then 2s) in-place.
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -45,7 +45,9 @@ vector<int> better(vector<int>& arr){
 }
 
 // optimal sol
+// Sort an array containing only 0, 1, and 2 in a single pass.
 // dutch national flag algo(tc: O(n) and O(1))
+
 void sortArray(vector<int>& arr, int n){
     int low = 0, mid =0, high = n-1;
     while(mid <= high) {

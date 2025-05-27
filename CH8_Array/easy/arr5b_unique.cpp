@@ -11,6 +11,7 @@ vector<int> removeDuplicate(vector<int> &arr)
     for (int num : arr)
     {
         //  st.end() denotes "Not found" marker in the set
+        // returns Iterator to the value if found, else returns set.end() (which means "not found").
         if (st.find(num) == st.end()) // 	num is not in the set
         {
             result.push_back(num); // If not seen before, add to result

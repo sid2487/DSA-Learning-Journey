@@ -11,7 +11,7 @@ int main() {
 int arr[] = {1,2,3,5}; 
 int n = sizeof(arr)/sizeof(arr[0]);
 
-/* 
+
 // brut
 
 for(int i=1; i<=n; i++){
@@ -26,7 +26,7 @@ if(flag==0){
     cout << "missing no" << i;
 }
 }
-*/
+
 
 // better by hashing: tc: O(2n) ans sc: O(n)
 // bool hash[n + 2] = {0};
@@ -62,6 +62,8 @@ for(int i=0; i<n-1; i++){
 // for(int i=1; i<n; i++){
 //     xor1 = xor1 ^ i;
 // }
+
+// this problem is based on the concept that, if you XOR all numbers from 1 to n and also XOR all elements in the array, the missing number will be the XOR of these two results.
 
 int arr[] = {1, 2, 3, 5};
 int n = sizeof(arr) / sizeof(arr[0]);

@@ -1,11 +1,13 @@
 // two sum
 // two varraiton(ist tell if target exist in the given array or not and second is to give the indexes)
 
+// Given an array of integers nums and an integer target, return the indices of the two numbers such that they add up to the target.
+
 #include<bits/stdc++.h>
-using namespace std;
+    using namespace std;
 
 // in the bruteforce sol, we can simply run two loops and check if arr[i]+arr[j] == target then return either true or index.
-// but tc: O(n2)
+// but tc: O(n^2)
 
 // better using hashing(O(n*logn)) and sc: O(n)
 vector<int> twoSum(vector<int>& arr, int target){

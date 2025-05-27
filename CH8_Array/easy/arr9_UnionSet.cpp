@@ -1,4 +1,4 @@
-// brut: tc: O(n1logn + n2logn) + O(n1+n2) and sc: O(n1+n2) + O(n1+n2)(this one is to just return the answer).
+// brut: tc: O(n1logn + n2logn) = O(n1+n2) and sc: O(n1+n2) + O(n1+n2)(this one is to just return the answer).
 #include<bits/stdc++.h>
 using namespace std;
 

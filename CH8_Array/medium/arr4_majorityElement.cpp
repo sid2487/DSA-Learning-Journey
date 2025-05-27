@@ -1,4 +1,7 @@
 // majortiy element: must be > n/2
+
+// Given an array arr[] of size n, find the element that appears more than ⌊n / 2⌋ times.
+// and if no such elements found, return -1.
 #include<bits/stdc++.h>
 using namespace std;
 

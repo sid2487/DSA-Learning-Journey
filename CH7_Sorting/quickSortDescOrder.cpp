@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// for descending ordere just reverse the comparison logic in partitionIndex funciton:
+// for descending orderer just reverse the comparison logic in partitionIndex funciton:
 
 int partitionIndex(vector<int>& arr, int low, int high){
     int pivot = arr[low];

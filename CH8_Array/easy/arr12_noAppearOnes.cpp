@@ -12,40 +12,41 @@ int noAppearOnes(vector<int>& arr){
             if(arr[j] == num){
                 cnt++;
             }
-            return -1; // Return -1 if no number appears exactly once
         }
         if (cnt == 1) return num;
     }
-    return -1;
-    
+    return -1; // Return -1 if no number appears exactly once
 }
 
 // better can be done by hashing(tc: O(3n) and sc: depends on input)
 
 // int betterSol(vector<int>& arr) {
-//     int maxi = arr[0];
-//     for(int i=0; i<arr.size(); i++) {
-//         maxi = max(maxi, arr[i]);
-//     }
-//     vector<int> hash(maxi + 1, 0);
-//     for(int i=0; i<arr.size(); i++){
-//         hash[arr[i]]++;
-//     }
 
-//     for(int i=0; i<arr.size(); i++){
-//         if(hash[arr[i]] == 1){
-//             return arr[i];
-//         }
-//     }
-//     return -1; // Return -1 if no number appears exactly once
-// }
+// you're creating a hash array of size maxi + 1 to count how many times each number appears.
+    //     int maxi = arr[0];
+    //     for(int i=0; i<arr.size(); i++) {
+    //         maxi = max(maxi, arr[i]);
+    //     }
+    //     vector<int> hash(maxi + 1, 0);
+    //     for(int i=0; i<arr.size(); i++){
+    //         hash[arr[i]]++;
+    //     }
 
-// better can be done using unordered map which handles negative nos and large nos too
+    //     for(int i=0; i<arr.size(); i++){
+    //         if(hash[arr[i]] == 1){
+    //             return arr[i];
+    //         }
+    //     }
+    //     return -1; // Return -1 if no number appears exactly once
+    // }
 
-// tc : worst case O(nlogm) where m is the size of map which is (n/2+1) and average case : O(n)
-// sc : O(n/2+1)
+    // better can be done using unordered map which handles negative nos and large nos too
 
-int betterSol(vector<int>& arr) {
+    // tc : worst case O(nlogm) where m is the size of map which is (n/2+1) and average case : O(n)
+    // sc : O(n/2+1)
+
+    int betterSol(vector<int> &arr)
+{
     unordered_map<int, int> hash;
 
     for(int num : arr){
@@ -61,9 +62,6 @@ int betterSol(vector<int>& arr) {
     }
     return -1;
 }
-
-
-
 
 // optim tc: O(n) and sc: O(1)
 int optSol(vector<int>& arr){

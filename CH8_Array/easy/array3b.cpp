@@ -8,8 +8,8 @@ int secondLargest(vector<int>& a, int n){
     int slargest = -1;
     for(int i=0; i<n; i++){
         if(a[i] > largest){
-            slargest = largest;
             largest = a[i];
+            slargest = largest;
         } else if(a[i] < largest && a[i] > slargest){
             slargest = a[i];
         }
@@ -22,14 +22,16 @@ int secondSmallest(vector<int>& a, int n){
     int ssmallest = INT_MAX;
     for(int i=0; i<n; i++){
         if(a[i] < smallest) {
-            ssmallest = smallest;
             smallest = a[i];
+            ssmallest = smallest;
         } else if(a[i] != smallest && a[i] < ssmallest){
             ssmallest = a[i];
         }
     }
     return ssmallest;
 }
+
+
 
 vector<int> getSecondOrderElement(int n, vector<int>& a){
     int slargest = secondLargest(a, n);
