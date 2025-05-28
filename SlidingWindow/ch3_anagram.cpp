@@ -17,7 +17,7 @@ using namespace std;
         mpp[c]++;
     }
 
-    int i=0, j=0;
+    int i=0, j=0;     
     int count = mpp.size();
     int ans = 0;
 

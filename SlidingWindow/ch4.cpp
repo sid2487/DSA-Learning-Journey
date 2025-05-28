@@ -1,7 +1,7 @@
 // maximum of all subarrays(larger no in the given window size)
+// so suppose if k=3 then we have to find the max element in every window of size 3 as the window slides through the array.
 // tc: O(n) because in each element goes in once and comes out once
 // sc: O(k) here the result vector ans stores (n-k+1) maximums, which is also O(n) but we genrally dont count output storage unless specified.
-
 
 #include <bits/stdc++.h>
 using namespace std;

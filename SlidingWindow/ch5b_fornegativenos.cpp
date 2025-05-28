@@ -25,7 +25,7 @@ int longestSubarraySum(vector<int> arr, long long k){
 
         // store only first occurece of this sum(here use the condn only when negative nos are there in the input, other wise directly store in map)
         if(preSumMap.find(sum) == preSumMap.end()){
-            preSumMap[sum] = i;
+            preSumMap[sum] = i; // storing the index
         }
 
     }
