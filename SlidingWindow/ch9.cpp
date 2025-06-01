@@ -1,4 +1,5 @@
 // minimum window substring: Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
+// sbse choti window size ki strig chahiye jisme saare t wale letters present ho and atleast jitne time hai utne times tho ho hi , usse jada doesn't matter aur wo s me v honi chahiye, unke alawa kuch extra aa rha we don't care.
 
 // core concept: 
 // firstly, store the input string 't' which you have to use in the bigger string 's'. and store the size of map in the count, and when count becomes zero that will be our one possible answer candidate.

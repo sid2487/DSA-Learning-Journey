@@ -1,34 +1,37 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> maxSubArray(vector<int> &arr, int k){
+int longSubstringUniqueChar(string &s, int k){
     int i=0, j=0;
-    vector<int> ans(0);
-    list <int> l;
-    int n = arr.size();
-    while(j<n){
-        while(l.size()>0 && l.back() < arr[j]){
-            l.pop_back();
-        }
-        l.push_back(arr[j]);
+    unordered_map<char, int> mp;
+    int mx = INT_MIN;
 
-        if((j-i+1) < k){
+    while(j<s.size()){
+
+        mp[s[j]]++;
+
+        if(mp.size() < k){
             j++;
-        }
-        else if((j-i+1) == k){
-            ans.push_back(l.front());
-
-            if(l.front() == arr[i]){
-                l.pop_front();
+        } else if(mp.size() == k){
+            mx = max(mx, (j-i+1));
+            j++;
+        } else if(mp.size() > k){
+            while(mp.size() > k){
+                mp[s[i]]--;
+                if(mp[s[i]] == 0){
+                    mp.erase(s[i]);
+                }
+                i++;
             }
-            i++;
             j++;
         }
     }
-    return ans;
-
+    return (mx == INT_MIN) ? 0 : mx;
 }
 
 int main(){
+
+
+
     return 0;
 }
