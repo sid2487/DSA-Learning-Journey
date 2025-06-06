@@ -19,6 +19,7 @@ int countRotation(int arr[], int n){
         int next = (mid+1)%n;
         int prev = (mid+n-1)%n;
         if(arr[mid] <= arr[prev] && arr[mid] <= arr[next]) return mid;
+        
 
         if(arr[start] <= arr[mid]){
             start = mid+1; // go in right
