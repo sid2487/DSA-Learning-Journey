@@ -1,4 +1,4 @@
-// constructor is a specail function that is automatically called when an object is created.
+// constructor is a special function that is automatically called when an object is created.
 // why needed:
 // to initialize the object with default or specific values.
 // to avoid having to manually set all the memeber varaibles every time.
