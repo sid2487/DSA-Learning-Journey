@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+// suppose 153 is a armstrong no then cube of each digit should be equal to the original no.
+// \(1^{3}+5^{3}+3^{3}=1+125+27=153\).            
 
-// 1 3 + 5 3 + 3 3 = 1 + 125 + 27 = 153
-
-    bool armstrongNo(int n)
+bool armstrongNo(int n)
 {
     int originalNo = n;
     long long sum = 0;
